@@ -7,7 +7,7 @@ const model = (() => {
   db.once('open', async () => {})
 
   mongoose.connect(
-    `mongodb+srv://padzz321:ldg8410229@mtmt.jjpwxml.mongodb.net/mtmt`,
+    `mongodb+srv://${process.env.MONGO_ID}:${process.env.MONGO_PW}@mtmt.jjpwxml.mongodb.net/mtmt`,
   )
 
   const models = {}
